@@ -3,19 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ReservaCanchas_Maui.AdminViews.AddComplejo"
              Title="Añadir Complejo">
+
+    <!-- Color de Background -->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#007BFF" Offset="0.0" />
+            <GradientStop Color="#7FDBFF" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
     <ScrollView>
         <StackLayout Padding="20" Spacing="15">
-            <Label Text="Nombre del Complejo" />
-            <Entry x:Name="NombreComplejoEntry" Placeholder="Introduce el nombre" />
+            <Label Text="Nombre del Complejo" TextColor="#333333"/>
+            <Entry x:Name="NombreComplejoEntry" 
+                   Placeholder="Introduce el nombre" 
+                   TextColor="#333"
+                   PlaceholderColor="#666"
+                   BackgroundColor="#FFFFFF"/>
 
-            <Label Text="Imagen del Complejo" />
-            <Entry x:Name="ImagenComplejoEntry" Placeholder="URL de la imagen" />
+            <Label Text="Imagen del Complejo" TextColor="#333333"/>
+            <Entry x:Name="ImagenComplejoEntry" 
+                   Placeholder="URL de la imagen" 
+                   TextColor="#333"
+                   PlaceholderColor="#666"
+                   BackgroundColor="#FFFFFF"/>
 
-            <Label Text="Selecciona un Administrador" />
-            <Picker x:Name="AdministradorPicker" Title="Seleccione un administrador"
-                    ItemDisplayBinding="{Binding NombreUsuario}" />
+            <Label Text="Selecciona un Administrador" TextColor="#333333"/>
+            <Picker x:Name="AdministradorPicker" 
+                    Title="Seleccione un administrador" 
+                    ItemDisplayBinding="{Binding NombreUsuario}" 
+                    BackgroundColor="#FFFFFF"
+                    TextColor="#333333"/>
 
-            <Button Text="Guardar Complejo" Clicked="OnGuardarComplejoClicked" />
+            <Button Text="Guardar Complejo" 
+                    BackgroundColor="#007BFF"
+                    TextColor="#FFFFFF"
+                    Clicked="OnGuardarComplejoClicked" />
         </StackLayout>
     </ScrollView>
 </ContentPage>
